@@ -14,7 +14,7 @@ print(f"Using device: {device}")
 
 # 1. Load already preprocessed datasets
 df_train = pd.read_csv('train_preprocesado.csv')
-df_val = pd.read_csv('validation_preprocesado.csv')
+df_val = pd.read_csv('val_preprocesado.csv')
 df_test = pd.read_csv('test_preprocesado.csv')
 
 # 2. Separate features and target
@@ -33,10 +33,11 @@ def create_module(input_dim=10, hidden_units=[100, 50], activation=nn.ReLU):
         layers.append(activation())
         in_dim = h
     layers.append(nn.Linear(in_dim, 1))
+    layers.append(nn.Flatten(start_dim=0))
+
     return nn.Sequential(*layers)
 
-# 4. Wrap with skorch NeuralNetRegressor
-# Determine input dimension
+# 4. Wrap with skorch NeuralNetRegressor (verbose=1 already prints train/valid loss per epoch)
 input_dim = X_train.shape[1]
 net = NeuralNetRegressor(
     module=create_module,
@@ -47,16 +48,10 @@ net = NeuralNetRegressor(
     optimizer=torch.optim.Adam,
     criterion=nn.MSELoss,
     device=device,
-    callbacks=[
-        ('print_log', PrintLog(
-            metrics=['train_loss', 'valid_loss'],
-            sink=print
-        ))
-    ],
-    verbose=1,  # show per-epoch output
+    verbose=1,  # shows train and valid loss each epoch
 )
 
-# 5. Hyperparameter distribution for RandomizedSearchCV
+# 5. Hyperparameter distribution for RandomizedSearchCV Hyperparameter distribution for RandomizedSearchCV
 dist_params = {
     'module__hidden_units': [[50], [100], [100, 50], [100, 100, 50]],
     'module__activation': [nn.ReLU, nn.Tanh],
@@ -99,6 +94,5 @@ out['prezo_euros'] = test_preds
 out.to_csv('test_predictions.csv', index=False)
 
 # 10. Export the trained model
-# We save the skorch regressor via pickle
 joblib.dump(best_net, 'mlp_price_model.pkl')
 print("Model and predictions saved.")
