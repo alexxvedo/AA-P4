@@ -3,6 +3,7 @@ import numpy as np
 import torch
 from torch import nn
 from skorch import NeuralNetRegressor
+from skorch.callbacks import PrintLog
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.metrics import mean_squared_error
 import joblib
@@ -46,7 +47,13 @@ net = NeuralNetRegressor(
     optimizer=torch.optim.Adam,
     criterion=nn.MSELoss,
     device=device,
-    verbose=0,
+    callbacks=[
+        ('print_log', PrintLog(
+            metrics=['train_loss', 'valid_loss'],
+            sink=print
+        ))
+    ],
+    verbose=1,  # show per-epoch output
 )
 
 # 5. Hyperparameter distribution for RandomizedSearchCV
