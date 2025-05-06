@@ -1,0 +1,8 @@
+.idea/
+bin/
+catboost_info/
+etc/
+include/
+lib/
+lib64/
+share/
