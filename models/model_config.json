@@ -1,0 +1,23 @@
+{
+    "data_path": "train.csv",
+    "test_path": "test.csv",
+    "output_dir": "models",
+    "model_file": "xgboost_model.json",
+    "encoders_file": "label_encoders.pkl",
+    "scaler_file": "scaler.pkl",
+    "imputer_file": "imputer.pkl",
+    "feature_importance_file": "feature_importance.png",
+    "submission_file": "submission_mae.csv",
+    "config_file": "model_config.json",
+    "test_size": 0.15,
+    "random_state": 42,
+    "eval_metric": "mae",
+    "cv_folds": 5,
+    "max_boost_rounds": 100,
+    "early_stopping_rounds": 50,
+    "n_trials": 2,
+    "timeout": 3600,
+    "target_column": "prezo_euros",
+    "id_column": "id",
+    "use_gpu": true
+}

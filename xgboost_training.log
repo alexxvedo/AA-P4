@@ -1,0 +1,339 @@
+2025-05-06 17:54:41,754 - __main__ - INFO - Iniciando pipeline de entrenamiento XGBoost
+2025-05-06 17:54:42,351 - __main__ - ERROR - Error al cargar datos: "['log_prezo'] not found in axis"
+2025-05-06 17:54:42,352 - __main__ - ERROR - Error en el pipeline: "['log_prezo'] not found in axis"
+Traceback (most recent call last):
+  File "/mnt/lustre/scratch/nlsas/home/usc/ci/avs/desktop.vTBr3YY5/ipykernel_3155329/2515943617.py", line 496, in <module>
+    main()
+  File "/mnt/lustre/scratch/nlsas/home/usc/ci/avs/desktop.vTBr3YY5/ipykernel_3155329/2515943617.py", line 359, in main
+    df = load_data(CONFIG['data_path'])
+  File "/mnt/lustre/scratch/nlsas/home/usc/ci/avs/desktop.vTBr3YY5/ipykernel_3155329/2515943617.py", line 113, in load_data
+    df.drop('log_prezo', axis=1, inplace=True)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/pandas/core/frame.py", line 4913, in drop
+    errors=errors,
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/pandas/core/generic.py", line 4150, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/pandas/core/generic.py", line 4185, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 6017, in drop
+    raise KeyError(f"{labels[mask]} not found in axis")
+KeyError: "['log_prezo'] not found in axis"
+2025-05-06 17:55:54,483 - __main__ - INFO - Iniciando pipeline de entrenamiento XGBoost
+2025-05-06 17:55:54,587 - __main__ - ERROR - Error al cargar datos: "['log_prezo'] not found in axis"
+2025-05-06 17:55:54,588 - __main__ - ERROR - Error en el pipeline: "['log_prezo'] not found in axis"
+Traceback (most recent call last):
+  File "/mnt/lustre/scratch/nlsas/home/usc/ci/avs/desktop.vTBr3YY5/ipykernel_3155329/211887007.py", line 496, in <module>
+    main()
+  File "/mnt/lustre/scratch/nlsas/home/usc/ci/avs/desktop.vTBr3YY5/ipykernel_3155329/211887007.py", line 359, in main
+    df = load_data(CONFIG['data_path'])
+  File "/mnt/lustre/scratch/nlsas/home/usc/ci/avs/desktop.vTBr3YY5/ipykernel_3155329/211887007.py", line 113, in load_data
+    df.drop('log_prezo', axis=1, inplace=True)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/pandas/core/frame.py", line 4913, in drop
+    errors=errors,
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/pandas/core/generic.py", line 4150, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/pandas/core/generic.py", line 4185, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 6017, in drop
+    raise KeyError(f"{labels[mask]} not found in axis")
+KeyError: "['log_prezo'] not found in axis"
+2025-05-06 18:00:11,895 - __main__ - INFO - Iniciando pipeline de entrenamiento XGBoost
+2025-05-06 18:00:12,438 - __main__ - INFO - Datos cargados correctamente: 20000 filas, 54 columnas
+2025-05-06 18:00:12,439 - __main__ - INFO - 
+Resumen estadístico:
+2025-05-06 18:00:12,440 - __main__ - INFO - Dimensiones: (20000, 54)
+2025-05-06 18:00:12,455 - __main__ - INFO - Valores faltantes por columna:
+Series([], dtype: int64)
+2025-05-06 18:00:12,468 - __main__ - INFO - Columnas numéricas: 45
+2025-05-06 18:00:12,469 - __main__ - INFO - Columnas categóricas: 6
+2025-05-06 18:00:12,475 - __main__ - INFO - Iniciando preprocesamiento de datos
+2025-05-06 18:00:12,632 - __main__ - INFO - Imputador y scaler guardados en models
+2025-05-06 18:00:12,889 - __main__ - INFO - Codificadores guardados en models
+2025-05-06 18:00:12,894 - __main__ - INFO - División de datos: 17000 muestras de entrenamiento, 3000 de validación
+2025-05-06 18:00:12,895 - __main__ - INFO - Iniciando búsqueda de hiperparámetros con Optuna (50 trials)
+2025-05-06 18:06:25,170 - __main__ - INFO - Iniciando pipeline de entrenamiento XGBoost
+2025-05-06 18:06:25,208 - __main__ - ERROR - Error al cargar datos: "['log_prezo'] not found in axis"
+2025-05-06 18:06:25,209 - __main__ - ERROR - Error en el pipeline: "['log_prezo'] not found in axis"
+Traceback (most recent call last):
+  File "/mnt/lustre/scratch/nlsas/home/usc/ci/avs/desktop.vTBr3YY5/ipykernel_3161428/1901056294.py", line 496, in <module>
+    main()
+  File "/mnt/lustre/scratch/nlsas/home/usc/ci/avs/desktop.vTBr3YY5/ipykernel_3161428/1901056294.py", line 359, in main
+    df = load_data(CONFIG['data_path'])
+  File "/mnt/lustre/scratch/nlsas/home/usc/ci/avs/desktop.vTBr3YY5/ipykernel_3161428/1901056294.py", line 113, in load_data
+    df.drop('log_prezo', axis=1, inplace=True)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/pandas/core/frame.py", line 4913, in drop
+    errors=errors,
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/pandas/core/generic.py", line 4150, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/pandas/core/generic.py", line 4185, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/pandas/core/indexes/base.py", line 6017, in drop
+    raise KeyError(f"{labels[mask]} not found in axis")
+KeyError: "['log_prezo'] not found in axis"
+2025-05-06 18:06:40,949 - __main__ - INFO - Iniciando pipeline de entrenamiento XGBoost
+2025-05-06 18:06:41,025 - __main__ - INFO - Datos cargados correctamente: 20000 filas, 20 columnas
+2025-05-06 18:06:41,026 - __main__ - INFO - 
+Resumen estadístico:
+2025-05-06 18:06:41,036 - __main__ - INFO - Dimensiones: (20000, 20)
+2025-05-06 18:06:41,057 - __main__ - INFO - Valores faltantes por columna:
+superficie_interior_m2    1007
+superficie_exterior_m2    1027
+distancia_centro_km       1011
+distancia_escola_km       1021
+indice_criminalidade       988
+dtype: int64
+2025-05-06 18:06:41,061 - __main__ - INFO - Columnas numéricas: 12
+2025-05-06 18:06:41,064 - __main__ - INFO - Columnas categóricas: 6
+2025-05-06 18:06:41,078 - __main__ - INFO - Iniciando preprocesamiento de datos
+2025-05-06 18:06:41,554 - __main__ - INFO - Imputador y scaler guardados en models
+2025-05-06 18:06:41,629 - __main__ - INFO - Codificadores guardados en models
+2025-05-06 18:06:41,633 - __main__ - INFO - División de datos: 17000 muestras de entrenamiento, 3000 de validación
+2025-05-06 18:06:41,635 - __main__ - INFO - Iniciando búsqueda de hiperparámetros con Optuna (3 trials)
+2025-05-06 18:07:59,729 - __main__ - INFO - Mejores hiperparámetros encontrados:
+2025-05-06 18:07:59,730 - __main__ - INFO -   learning_rate: 0.11536162338241392
+2025-05-06 18:08:01,265 - __main__ - INFO -   max_depth: 5
+2025-05-06 18:08:01,265 - __main__ - INFO -   min_child_weight: 10
+2025-05-06 18:08:01,266 - __main__ - INFO -   subsample: 0.5917022549267169
+2025-05-06 18:08:01,266 - __main__ - INFO -   colsample_bytree: 0.6521211214797689
+2025-05-06 18:08:01,270 - __main__ - INFO -   lambda: 0.12561043700013558
+2025-05-06 18:08:01,270 - __main__ - INFO -   alpha: 0.05342937261279776
+2025-05-06 18:08:01,271 - __main__ - INFO -   gamma: 1.4561457009902097
+2025-05-06 18:08:01,978 - __main__ - INFO -   grow_policy: depthwise
+2025-05-06 18:08:01,980 - __main__ - INFO -   max_leaves: 75
+2025-05-06 18:08:01,981 - __main__ - INFO -   max_bin: 350
+2025-05-06 18:08:01,982 - __main__ - INFO - Mejor RMSE CV: 30301.8574
+2025-05-06 18:08:01,984 - __main__ - INFO - Entrenando modelo final con los mejores hiperparámetros
+2025-05-06 18:08:02,022 - __main__ - ERROR - Error en el pipeline: [18:08:02] ../src/objective/objective.cc:26: Unknown objective function: `reg:absoluteerror`
+Objective candidate: survival:aft
+Objective candidate: binary:hinge
+Objective candidate: multi:softmax
+Objective candidate: multi:softprob
+Objective candidate: rank:pairwise
+Objective candidate: rank:ndcg
+Objective candidate: rank:map
+Objective candidate: reg:squarederror
+Objective candidate: reg:squaredlogerror
+Objective candidate: reg:logistic
+Objective candidate: binary:logistic
+Objective candidate: binary:logitraw
+Objective candidate: reg:linear
+Objective candidate: reg:pseudohubererror
+Objective candidate: count:poisson
+Objective candidate: survival:cox
+Objective candidate: reg:gamma
+Objective candidate: reg:tweedie
+
+Stack trace:
+  [bt] (0) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(+0x299dad) [0x7fc674590dad]
+  [bt] (1) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(+0x29a409) [0x7fc674591409]
+  [bt] (2) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(+0x2230f2) [0x7fc67451a0f2]
+  [bt] (3) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(+0x22af7d) [0x7fc674521f7d]
+  [bt] (4) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(XGBoosterBoostedRounds+0x31) [0x7fc6743b4261]
+  [bt] (5) /mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib64/libffi.so.7(+0x6bdd) [0x7fc6c4d2abdd]
+  [bt] (6) /mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib64/libffi.so.7(+0x6149) [0x7fc6c4d2a149]
+  [bt] (7) /mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/python3.7/lib-dynload/_ctypes.cpython-37m-x86_64-linux-gnu.so(_ctypes_callproc+0x2f6) [0x7fc6c360b176]
+  [bt] (8) /mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/python3.7/lib-dynload/_ctypes.cpython-37m-x86_64-linux-gnu.so(+0xa341) [0x7fc6c3604341]
+
+Traceback (most recent call last):
+  File "/mnt/lustre/scratch/nlsas/home/usc/ci/avs/desktop.vTBr3YY5/ipykernel_3161428/1212510620.py", line 496, in <module>
+    main()
+  File "/mnt/lustre/scratch/nlsas/home/usc/ci/avs/desktop.vTBr3YY5/ipykernel_3161428/1212510620.py", line 436, in main
+    verbose_eval=100
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/core.py", line 575, in inner_f
+    return f(**kwargs)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/training.py", line 176, in train
+    bst = cb_container.before_training(bst)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/callback.py", line 147, in before_training
+    model = c.before_training(model=model)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/callback.py", line 349, in before_training
+    self.starting_round = model.num_boosted_rounds()
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/core.py", line 2319, in num_boosted_rounds
+    _check_call(_LIB.XGBoosterBoostedRounds(self.handle, ctypes.byref(rounds)))
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/core.py", line 246, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: [18:08:02] ../src/objective/objective.cc:26: Unknown objective function: `reg:absoluteerror`
+Objective candidate: survival:aft
+Objective candidate: binary:hinge
+Objective candidate: multi:softmax
+Objective candidate: multi:softprob
+Objective candidate: rank:pairwise
+Objective candidate: rank:ndcg
+Objective candidate: rank:map
+Objective candidate: reg:squarederror
+Objective candidate: reg:squaredlogerror
+Objective candidate: reg:logistic
+Objective candidate: binary:logistic
+Objective candidate: binary:logitraw
+Objective candidate: reg:linear
+Objective candidate: reg:pseudohubererror
+Objective candidate: count:poisson
+Objective candidate: survival:cox
+Objective candidate: reg:gamma
+Objective candidate: reg:tweedie
+
+Stack trace:
+  [bt] (0) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(+0x299dad) [0x7fc674590dad]
+  [bt] (1) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(+0x29a409) [0x7fc674591409]
+  [bt] (2) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(+0x2230f2) [0x7fc67451a0f2]
+  [bt] (3) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(+0x22af7d) [0x7fc674521f7d]
+  [bt] (4) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(XGBoosterBoostedRounds+0x31) [0x7fc6743b4261]
+  [bt] (5) /mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib64/libffi.so.7(+0x6bdd) [0x7fc6c4d2abdd]
+  [bt] (6) /mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib64/libffi.so.7(+0x6149) [0x7fc6c4d2a149]
+  [bt] (7) /mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/python3.7/lib-dynload/_ctypes.cpython-37m-x86_64-linux-gnu.so(_ctypes_callproc+0x2f6) [0x7fc6c360b176]
+  [bt] (8) /mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/python3.7/lib-dynload/_ctypes.cpython-37m-x86_64-linux-gnu.so(+0xa341) [0x7fc6c3604341]
+
+
+2025-05-06 18:08:06,511 - __main__ - INFO - Mejores hiperparámetros encontrados:
+2025-05-06 18:08:06,512 - __main__ - INFO -   learning_rate: 0.0347798337680597
+2025-05-06 18:08:07,976 - __main__ - INFO -   max_depth: 7
+2025-05-06 18:08:07,977 - __main__ - INFO -   min_child_weight: 22
+2025-05-06 18:08:07,977 - __main__ - INFO -   subsample: 0.643954649732532
+2025-05-06 18:08:07,978 - __main__ - INFO -   colsample_bytree: 0.6963213809936001
+2025-05-06 18:08:07,978 - __main__ - INFO -   lambda: 0.013341642676071287
+2025-05-06 18:08:07,979 - __main__ - INFO -   alpha: 1.0896484439663565
+2025-05-06 18:08:07,979 - __main__ - INFO -   gamma: 2.938026665926093
+2025-05-06 18:08:07,980 - __main__ - INFO -   grow_policy: lossguide
+2025-05-06 18:08:07,981 - __main__ - INFO -   max_leaves: 165
+2025-05-06 18:08:07,982 - __main__ - INFO -   max_bin: 426
+2025-05-06 18:08:07,982 - __main__ - INFO - Mejor RMSE CV: 30009.8790
+2025-05-06 18:08:07,983 - __main__ - INFO - Entrenando modelo final con los mejores hiperparámetros
+2025-05-06 18:08:08,062 - __main__ - ERROR - Error en el pipeline: [18:08:08] ../src/objective/objective.cc:26: Unknown objective function: `reg:absoluteerror`
+Objective candidate: survival:aft
+Objective candidate: binary:hinge
+Objective candidate: multi:softmax
+Objective candidate: multi:softprob
+Objective candidate: rank:pairwise
+Objective candidate: rank:ndcg
+Objective candidate: rank:map
+Objective candidate: reg:squarederror
+Objective candidate: reg:squaredlogerror
+Objective candidate: reg:logistic
+Objective candidate: binary:logistic
+Objective candidate: binary:logitraw
+Objective candidate: reg:linear
+Objective candidate: reg:pseudohubererror
+Objective candidate: count:poisson
+Objective candidate: survival:cox
+Objective candidate: reg:gamma
+Objective candidate: reg:tweedie
+
+Stack trace:
+  [bt] (0) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(+0x299dad) [0x7f2141d0fdad]
+  [bt] (1) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(+0x29a409) [0x7f2141d10409]
+  [bt] (2) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(+0x2230f2) [0x7f2141c990f2]
+  [bt] (3) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(+0x22af7d) [0x7f2141ca0f7d]
+  [bt] (4) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(XGBoosterBoostedRounds+0x31) [0x7f2141b33261]
+  [bt] (5) /mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib64/libffi.so.7(+0x6bdd) [0x7f21924adbdd]
+  [bt] (6) /mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib64/libffi.so.7(+0x6149) [0x7f21924ad149]
+  [bt] (7) /mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/python3.7/lib-dynload/_ctypes.cpython-37m-x86_64-linux-gnu.so(_ctypes_callproc+0x2f6) [0x7f2190d8e176]
+  [bt] (8) /mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/python3.7/lib-dynload/_ctypes.cpython-37m-x86_64-linux-gnu.so(+0xa341) [0x7f2190d87341]
+
+Traceback (most recent call last):
+  File "/mnt/lustre/scratch/nlsas/home/usc/ci/avs/desktop.vTBr3YY5/ipykernel_3155329/211887007.py", line 496, in <module>
+    main()
+  File "/mnt/lustre/scratch/nlsas/home/usc/ci/avs/desktop.vTBr3YY5/ipykernel_3155329/211887007.py", line 436, in main
+    verbose_eval=100
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/core.py", line 575, in inner_f
+    return f(**kwargs)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/training.py", line 176, in train
+    bst = cb_container.before_training(bst)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/callback.py", line 147, in before_training
+    model = c.before_training(model=model)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/callback.py", line 349, in before_training
+    self.starting_round = model.num_boosted_rounds()
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/core.py", line 2319, in num_boosted_rounds
+    _check_call(_LIB.XGBoosterBoostedRounds(self.handle, ctypes.byref(rounds)))
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/core.py", line 246, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: [18:08:08] ../src/objective/objective.cc:26: Unknown objective function: `reg:absoluteerror`
+Objective candidate: survival:aft
+Objective candidate: binary:hinge
+Objective candidate: multi:softmax
+Objective candidate: multi:softprob
+Objective candidate: rank:pairwise
+Objective candidate: rank:ndcg
+Objective candidate: rank:map
+Objective candidate: reg:squarederror
+Objective candidate: reg:squaredlogerror
+Objective candidate: reg:logistic
+Objective candidate: binary:logistic
+Objective candidate: binary:logitraw
+Objective candidate: reg:linear
+Objective candidate: reg:pseudohubererror
+Objective candidate: count:poisson
+Objective candidate: survival:cox
+Objective candidate: reg:gamma
+Objective candidate: reg:tweedie
+
+Stack trace:
+  [bt] (0) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(+0x299dad) [0x7f2141d0fdad]
+  [bt] (1) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(+0x29a409) [0x7f2141d10409]
+  [bt] (2) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(+0x2230f2) [0x7f2141c990f2]
+  [bt] (3) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(+0x22af7d) [0x7f2141ca0f7d]
+  [bt] (4) /mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/lib/libxgboost.so(XGBoosterBoostedRounds+0x31) [0x7f2141b33261]
+  [bt] (5) /mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib64/libffi.so.7(+0x6bdd) [0x7f21924adbdd]
+  [bt] (6) /mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib64/libffi.so.7(+0x6149) [0x7f21924ad149]
+  [bt] (7) /mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/python3.7/lib-dynload/_ctypes.cpython-37m-x86_64-linux-gnu.so(_ctypes_callproc+0x2f6) [0x7f2190d8e176]
+  [bt] (8) /mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/python3.7/lib-dynload/_ctypes.cpython-37m-x86_64-linux-gnu.so(+0xa341) [0x7f2190d87341]
+
+
+2025-05-06 18:12:25,734 - __main__ - INFO - Iniciando pipeline de entrenamiento XGBoost
+2025-05-06 18:12:25,773 - __main__ - INFO - Datos cargados correctamente: 20000 filas, 20 columnas
+2025-05-06 18:12:25,984 - __main__ - INFO - 
+Resumen estadístico:
+2025-05-06 18:12:30,240 - __main__ - INFO - Dimensiones: (20000, 20)
+2025-05-06 18:12:30,254 - __main__ - INFO - Valores faltantes por columna:
+superficie_interior_m2    1007
+superficie_exterior_m2    1027
+distancia_centro_km       1011
+distancia_escola_km       1021
+indice_criminalidade       988
+dtype: int64
+2025-05-06 18:12:30,257 - __main__ - INFO - Columnas numéricas: 12
+2025-05-06 18:12:30,263 - __main__ - INFO - Columnas categóricas: 6
+2025-05-06 18:12:30,519 - __main__ - INFO - Iniciando preprocesamiento de datos
+2025-05-06 18:12:30,823 - __main__ - INFO - Imputador y scaler guardados en models
+2025-05-06 18:12:30,985 - __main__ - INFO - Codificadores guardados en models
+2025-05-06 18:12:30,989 - __main__ - INFO - División de datos: 17000 muestras de entrenamiento, 3000 de validación
+2025-05-06 18:12:30,990 - __main__ - INFO - Iniciando búsqueda de hiperparámetros con Optuna (2 trials)
+2025-05-06 18:12:33,046 - __main__ - INFO - Mejores hiperparámetros encontrados:
+2025-05-06 18:12:33,047 - __main__ - INFO -   learning_rate: 0.11536162338241392
+2025-05-06 18:12:35,690 - __main__ - INFO -   max_depth: 5
+2025-05-06 18:12:35,691 - __main__ - INFO -   min_child_weight: 10
+2025-05-06 18:12:35,691 - __main__ - INFO -   subsample: 0.5917022549267169
+2025-05-06 18:12:35,692 - __main__ - INFO -   colsample_bytree: 0.6521211214797689
+2025-05-06 18:12:35,692 - __main__ - INFO -   lambda: 0.12561043700013558
+2025-05-06 18:12:35,693 - __main__ - INFO -   alpha: 0.05342937261279776
+2025-05-06 18:12:35,694 - __main__ - INFO -   gamma: 1.4561457009902097
+2025-05-06 18:12:35,694 - __main__ - INFO -   grow_policy: depthwise
+2025-05-06 18:12:35,696 - __main__ - INFO -   max_leaves: 75
+2025-05-06 18:12:35,697 - __main__ - INFO -   max_bin: 350
+2025-05-06 18:12:35,699 - __main__ - INFO - Mejor MAE CV: 30301.8574
+2025-05-06 18:12:35,699 - __main__ - INFO - Entrenando modelo final con los mejores hiperparámetros
+2025-05-06 18:12:36,075 - __main__ - INFO - Evaluación en validación:
+2025-05-06 18:12:36,075 - __main__ - INFO -   MAE: 30256.2536 (métrica principal)
+2025-05-06 18:12:36,091 - __main__ - INFO -   RMSE: 41439.7327
+2025-05-06 18:12:36,099 - __main__ - INFO -   R²: 0.9381
+2025-05-06 18:12:36,108 - __main__ - INFO -   MAPE: 20.00%
+2025-05-06 18:12:36,124 - __main__ - INFO -   MedianAE: 23671.0312
+2025-05-06 18:12:40,504 - __main__ - INFO - Gráfico de importancia guardado en models/feature_importance.png
+2025-05-06 18:12:40,664 - __main__ - INFO - Modelo final guardado en models/xgboost_model.json
+2025-05-06 18:12:40,665 - __main__ - INFO - Generando predicciones para test.csv
+2025-05-06 18:12:41,061 - __main__ - ERROR - Error en el pipeline: feature_names mismatch: ['superficie_interior_m2', 'superficie_exterior_m2', 'numero_habitacions', 'numero_banos', 'ano_construccion', 'lonxitude', 'latitude', 'temperatura_media_mes_construccion', 'tipo_edificacion', 'calidade_materiais', 'cor_favorita_propietario', 'distancia_centro_km', 'distancia_escola_km', 'indice_criminalidade', 'acceso_transporte_publico', 'orientacion', 'eficiencia_enerxetica', 'numero_arboles_xardin'] ['Unnamed: 0', 'superficie_interior_m2', 'superficie_exterior_m2', 'numero_habitacions', 'numero_banos', 'ano_construccion', 'lonxitude', 'latitude', 'temperatura_media_mes_construccion', 'tipo_edificacion', 'calidade_materiais', 'cor_favorita_propietario', 'distancia_centro_km', 'distancia_escola_km', 'indice_criminalidade', 'acceso_transporte_publico', 'orientacion', 'eficiencia_enerxetica', 'numero_arboles_xardin']
+training data did not have the following fields: Unnamed: 0
+Traceback (most recent call last):
+  File "/mnt/lustre/scratch/nlsas/home/usc/ci/avs/desktop.vTBr3YY5/ipykernel_3161428/3595634118.py", line 488, in <module>
+    main()
+  File "/mnt/lustre/scratch/nlsas/home/usc/ci/avs/desktop.vTBr3YY5/ipykernel_3161428/3595634118.py", line 464, in main
+    test_preds = final_model.predict(dtest)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/core.py", line 1997, in predict
+    self._validate_features(data)
+  File "/mnt/netapp2/Store_uni/home/usc/ci/avs/personal/aprendizaje/p4/venvP4/lib/python3.7/site-packages/xgboost/core.py", line 2618, in _validate_features
+    raise ValueError(msg.format(self.feature_names, data.feature_names))
+ValueError: feature_names mismatch: ['superficie_interior_m2', 'superficie_exterior_m2', 'numero_habitacions', 'numero_banos', 'ano_construccion', 'lonxitude', 'latitude', 'temperatura_media_mes_construccion', 'tipo_edificacion', 'calidade_materiais', 'cor_favorita_propietario', 'distancia_centro_km', 'distancia_escola_km', 'indice_criminalidade', 'acceso_transporte_publico', 'orientacion', 'eficiencia_enerxetica', 'numero_arboles_xardin'] ['Unnamed: 0', 'superficie_interior_m2', 'superficie_exterior_m2', 'numero_habitacions', 'numero_banos', 'ano_construccion', 'lonxitude', 'latitude', 'temperatura_media_mes_construccion', 'tipo_edificacion', 'calidade_materiais', 'cor_favorita_propietario', 'distancia_centro_km', 'distancia_escola_km', 'indice_criminalidade', 'acceso_transporte_publico', 'orientacion', 'eficiencia_enerxetica', 'numero_arboles_xardin']
+training data did not have the following fields: Unnamed: 0
