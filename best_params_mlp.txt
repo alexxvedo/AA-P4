@@ -1,0 +1,5 @@
+Mejores hiper-parámetros:
+  mlp__activation: relu
+  mlp__alpha: 0.0011214774784159462
+  mlp__hidden_layer_sizes: (256, 256, 128, 64)
+  mlp__learning_rate_init: 0.00069389014127394
