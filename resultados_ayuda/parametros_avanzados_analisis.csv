@@ -1,8 +1,0 @@
-Parámetro,Valor,MAE
-loss_function,MAE,47573.336891612766
-loss_function,RMSE,45718.8651086566
-loss_function,Quantile:alpha=0.5,47573.336891612766
-loss_function,Huber:delta=1.0,221493.07901733823
-boosting_type,Plain,47573.336891612766
-bootstrap_type,Bayesian,56632.44351586888
-leaf_estimation_method,Gradient,129042.10559056752
